@@ -41,32 +41,32 @@ const toolboxItems = [
   },
 ];
 
-const hobbies=[
+const hobbies = [
   {
-    title:'Painting',
-    emoji:''
+    title: "Painting",
+    emoji: "🎨",
   },
   {
-    title:'',
-    emoji:''
+    title: "Photography",
+    emoji: "🎥",
   },
   {
-    title:'',
-    emoji:''
+    title: "Singing",
+    emoji: "🎙️",
   },
   {
-    title:'',
-    emoji:''
+    title: "Fitness",
+    emoji: "🏋️",
   },
   {
-    title:'',
-    emoji:''
+    title: "Cooking",
+    emoji: "🔪",
   },
   {
-    title:'',
-    emoji:''
+    title: "Reading",
+    emoji: "📚",
   },
-]
+];
 
 export const AboutSection = () => {
   return (
@@ -108,6 +108,14 @@ export const AboutSection = () => {
             <StarIcon />
             <h3>Beyond the Code</h3>
             <p>Explore my interests and hobbies beyond the digital realm</p>
+          </div>
+          <div>
+            {hobbies.map((hobby) => (
+              <div key={hobby.title}>
+                <span>{hobby.title}</span>
+                <span>{hobby.emoji}</span> 
+              </div>
+            ))}
           </div>
         </Card>
         <Card>
